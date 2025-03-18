@@ -1,8 +1,9 @@
-import "./cadastro.css";
+
+import "./login.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faHouse, faChartSimple, faMagnifyingGlass, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 
-export default function BetterSleep() {
+export default function Login() {
 
 
   return (
@@ -28,16 +29,17 @@ export default function BetterSleep() {
           </ul>
         </div>
 
-        {/* Formulário de Cadastro */}
+        {/* Formulário de Login */}
         <div className="cadastro">
-          <h2><strong>Cadastro</strong></h2>
+          <h2><strong>Login</strong></h2>
           <ul>
-            <p><strong>Nome:</strong> <input type="text" name="nome" placeholder="Escreva aqui.."  /></p>
-            <p><strong>Idade:</strong> <input type="number" name="idade" placeholder="Escreva aqui.." /></p>
-            <p><strong>Email:</strong> <input type="email" name="email" placeholder="Escreva aqui.." /></p>
+            <p><strong>Email:</strong> <input type="email" name="email" placeholder="Escreva aqui.."  /></p>
             <p><strong>Senha:</strong> <input type="password" name="senha" placeholder="Escreva aqui.." /></p>
-            <button className="botaoCadastrar"><strong>Cadastrar</strong></button>
           </ul>
+          <div className="botoesCadastros">
+            <button className="botaoLogar"><strong>Logar-se</strong></button>
+            <button className="botaoCadastrar"><strong>Cadastre-se</strong></button>
+          </div>
         </div>
       </div>
     </div>
