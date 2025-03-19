@@ -1,4 +1,6 @@
+'use client'
 import React from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faHouse, faChartSimple, faMagnifyingGlassChart, faPeopleGroup, faMoon, faBriefcase, faDumbbell } from '@fortawesome/free-solid-svg-icons';
 import './analise.css';
@@ -32,7 +34,7 @@ function App() {
           </ul>
         </div>
 
-        <main className="container text-white mt-4">
+        <main className="container">
           <div className="row">
             <div className="container text-center">
               <div className="row">
@@ -47,7 +49,7 @@ function App() {
               <div>
                 <div className="conteudoPrincipal">
                   <div className="cardGeral">
-                    <FontAwesomeIcon icon={faMoon} />
+                    <FontAwesomeIcon icon={faMoon} size='2x' />
                     <p className="texto1">Dorme 5 horas</p>
                     <p className="texto2">
                       Você deveria dormir pelo menos <br /> mais 2 horas
@@ -55,7 +57,7 @@ function App() {
                   </div>
 
                   <div className="cardGeral2">
-                    <FontAwesomeIcon icon={faBriefcase} />
+                    <FontAwesomeIcon icon={faBriefcase} size='2x' />
                     <p className="texto1">Trabalha em um emprego manual</p>
                     <p className="texto2">
                       O emprego manual pode impactar o ciclo circadiano de diversas
@@ -65,7 +67,7 @@ function App() {
                   </div>
 
                   <div className="cardGeral3">
-                    <FontAwesomeIcon icon={faDumbbell} />
+                    <FontAwesomeIcon icon={faDumbbell} size='2x' />
                     <p className="texto1">Você pratica Exercício</p>
                     <p className="texto2">
                       A prática de exercícios pode influenciar o ciclo circadiano <br /> de
@@ -74,31 +76,53 @@ function App() {
                   </div>
                 </div>
 
-                <div className="paragrafo">
+                <div className="paragrafo0">
                   <h1>Análise</h1>
                   <p>
                     Para melhorar seu ciclo circadiano e sua saúde geral, considere as
                     seguintes recomendações:
+                    </p>
                     <br />
-                    <br />
+
+
+                    
+                    <p>
                     <strong>Aumente suas horas de sono:</strong> Tente dormir pelo menos 7-8
                     horas por dia. Se possível, ajuste seu horário de trabalho para permitir
                     um sono mais regular.
+                    </p>
+                    
+
                     <br />
-                    <br />
+
+
+                    
+                    <p>
                     <strong>Crie um ambiente propício ao sono:</strong> Use cortinas blackout
                     para bloquear a luz durante o dia e mantenha seu quarto fresco e
                     silencioso.
+                    </p>
+                    
+
                     <br />
-                    <br />
+                    
+                    
+                    <p>
                     <strong>Evite luzes brilhantes antes de dormir:</strong> Limite a exposição
                     a telas e luzes brilhantes pelo menos uma hora antes de dormir para ajudar
                     na produção de melatonina.
+                    </p>
+                    
+        
+
                     <br />
-                    <br />
+
+                    
+                    <p>
                     <strong>Mantenha uma rotina regular:</strong> Tente dormir e acordar nos
                     mesmos horários todos os dias, mesmo nos fins de semana.
-                  </p>
+                    </p>
+                    
                 </div>
               </div>
             </div>
