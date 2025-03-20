@@ -13,13 +13,18 @@ function App() {
           <FontAwesomeIcon icon={faBars} />
         </button>
         <h1>Better Sleep</h1>
+
         <button className="semborda"><a href="./login">login/Cadastro</a></button>
+
+        <button className="semborda">Login/Cadastro</button>
+
       </div>
 
       <div id="menugeral">
         <div id="menulateral">
           <ul>
             <li>
+
               <FontAwesomeIcon icon={faHouse} /> <a href='/pi'> Início</a>
             </li>
             <li>
@@ -30,6 +35,18 @@ function App() {
             </li>
             <li>
               <FontAwesomeIcon icon={faPeopleGroup} /><a href='/pi'> Sobre Nós</a>
+
+              <FontAwesomeIcon icon={faHouse} /> Início
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faChartSimple} /> Formulário
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faMagnifyingGlassChart} /> Análise
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faPeopleGroup} /> Sobre Nós
+
             </li>
           </ul>
         </div>
