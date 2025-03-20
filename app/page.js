@@ -1,11 +1,21 @@
+'use client'
+import { useState } from "react";
 import "./cadastro.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faHouse, faChartSimple, faMagnifyingGlass, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 
-export default function BetterSleep() {
+
+export default function Cadastro() {
+
+  
+  const[Nome, alteraNome]=useState ("")
+  const[Idade, alteraIdade]=useState ("")
+  const[Email, alteraEmail]=useState ("")
+  const[Senha, alteraSenha]=useState ("")
 
 
-  return (
+
+ return (
     <div id="container">
       {/* Menu Superior */}
       <div id="menusuperior">
@@ -13,7 +23,7 @@ export default function BetterSleep() {
           <FontAwesomeIcon icon={faBars} />
         </button>
         <h1>Better Sleep</h1>
-        <button className="semborda">Login/Cadastro</button>
+        <button className="semborda"><a href="./login">login/Cadastro</a></button>
       </div>
       
       {/* Conteúdo Principal */}
@@ -21,10 +31,10 @@ export default function BetterSleep() {
         {/* Menu Lateral */}
         <div id="menulateral">
           <ul>
-            <li><FontAwesomeIcon icon={faHouse} className="icones" /> Início</li>
-            <li><FontAwesomeIcon icon={faChartSimple} className="icones" /> Formulário</li>
-            <li><FontAwesomeIcon icon={faMagnifyingGlass} className="icones" /> Análise</li>
-            <li><FontAwesomeIcon icon={faPeopleGroup} className="icones" /> Sobre nós</li>
+           <li><FontAwesomeIcon icon={faHouse} className="icones" /><a href='/pi'> Início</a></li>
+                     <li><FontAwesomeIcon icon={faChartSimple} className="icones" /> <a href='/formulario'>Formulário</a></li>
+                     <li><FontAwesomeIcon icon={faMagnifyingGlass} className="icones" /><a href='/analises'>Análise</a></li>
+                     <li><FontAwesomeIcon icon={faPeopleGroup} className="icones" /><a href='/pi'> Sobre nós</a></li>
           </ul>
         </div>
 
@@ -32,10 +42,10 @@ export default function BetterSleep() {
         <div className="cadastro">
           <h2><strong>Cadastro</strong></h2>
           <ul>
-            <p><strong>Nome:</strong> <input type="text" name="nome" placeholder="Escreva aqui.."  /></p>
-            <p><strong>Idade:</strong> <input type="number" name="idade" placeholder="Escreva aqui.." /></p>
-            <p><strong>Email:</strong> <input type="email" name="email" placeholder="Escreva aqui.." /></p>
-            <p><strong>Senha:</strong> <input type="password" name="senha" placeholder="Escreva aqui.." /></p>
+            <p><strong>Nome:</strong> <input onChange={(e)=> alteraNome (e.target.value)} type="text" name="nome" placeholder="Escreva aqui.."  /></p>
+            <p><strong>Idade:</strong> <input onChange={(e)=> alteraIdade (e.target.value)} type="number" name="idade" placeholder="Escreva aqui.." /></p>
+            <p><strong>Email:</strong> <input onChange={(e)=> alteraEmail (e.target.value)} type="email" name="email" placeholder="Escreva aqui.." /></p>
+            <p><strong>Senha:</strong> <input onChange={(e)=> alteraSenha (e.target.value)} type="password" name="senha" placeholder="Escreva aqui.." /></p>
             <button className="botaoCadastrar"><strong>Cadastrar</strong></button>
           </ul>
         </div>

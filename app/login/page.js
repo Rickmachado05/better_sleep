@@ -1,12 +1,45 @@
-
+'use client'
+import React from 'react';
+import { useState } from "react";
 import "./login.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faHouse, faChartSimple, faMagnifyingGlass, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function Login() {
 
+const notify = () => toast("acesso autorizado");
+const notify2 = () => toast("acesso negado");
+const[Email, alteraEmail]=useState ("")
+const[Senha, alteraSenha]=useState ("")
+const[MostraSucesso, alteraMostraSucesso]=useState("")
+const[MostraErro, alteraMostraErro]= useState("")
+  
+function validarLogin(){
+     
+  if (Email=="Rafael" && Senha=="1234"){
+          alteraMostraErro(false)
+          alteraMostraSucesso(true)
 
-  return (
+  }else{
+          alteraMostraErro(true)
+          alteraMostraSucesso(false)
+
+  }
+
+  
+  if(MostraErro==(true) && MostraSucesso==(false))
+    {
+      notify2()
+
+}
+else{
+  notify()
+}
+}
+
+
+return (
     <div id="container">
       {/* Menu Superior */}
       <div id="menusuperior">
@@ -14,7 +47,7 @@ export default function Login() {
           <FontAwesomeIcon icon={faBars} />
         </button>
         <h1>Better Sleep</h1>
-        <button className="semborda">Login/Cadastro</button>
+        <button className="semborda"><a href='/login'>Login/Cadastro</a></button>
       </div>
       
       {/* Conteúdo Principal */}
@@ -22,10 +55,10 @@ export default function Login() {
         {/* Menu Lateral */}
         <div id="menulateral">
           <ul>
-            <li><FontAwesomeIcon icon={faHouse} className="icones" /> Início</li>
-            <li><FontAwesomeIcon icon={faChartSimple} className="icones" /> Formulário</li>
-            <li><FontAwesomeIcon icon={faMagnifyingGlass} className="icones" /> Análise</li>
-            <li><FontAwesomeIcon icon={faPeopleGroup} className="icones" /> Sobre nós</li>
+            <li><FontAwesomeIcon icon={faHouse} className="icones" /><a href='/pi'> Início</a></li>
+            <li><FontAwesomeIcon icon={faChartSimple} className="icones" /> <a href='/formulario'>Formulário</a></li>
+            <li><FontAwesomeIcon icon={faMagnifyingGlass} className="icones" /><a href='/analises'>Análise</a></li>
+            <li><FontAwesomeIcon icon={faPeopleGroup} className="icones" /><a href='/pi'> Sobre nós</a></li>
           </ul>
         </div>
 
@@ -33,15 +66,16 @@ export default function Login() {
         <div className="cadastro">
           <h2><strong>Login</strong></h2>
           <ul>
-            <p><strong>Email:</strong> <input type="email" name="email" placeholder="Escreva aqui.."  /></p>
-            <p><strong>Senha:</strong> <input type="password" name="senha" placeholder="Escreva aqui.." /></p>
+            <p><strong>Email:</strong> <input  onChange={(e)=> alteraEmail (e.target.value) }type="email" name="email" placeholder="Escreva aqui.."  /></p>
+            <p><strong>Senha:</strong> <input  onChange={(e)=> alteraSenha (e.target.value) }type="password" name="senha" placeholder="Escreva aqui.." /></p>
           </ul>
           <div className="botoesCadastros">
-            <button className="botaoLogar"><strong>Logar-se</strong></button>
-            <button className="botaoCadastrar"><strong>Cadastre-se</strong></button>
+            <button className="botaoLogar" onClick={()=>validarLogin()}><strong>Logar-se</strong></button>
+            <button className="botaoCadastrar"><strong><a href='/'>Cadastre-se</a></strong></button>
+            <ToastContainer />
           </div>
         </div>
       </div>
     </div>
   );
-}
+}  

@@ -10,7 +10,7 @@ body{
 }
 
 #menusuperior {
-    
+  
     font-family: "Anton", sans-serif;
     padding: 10px;
     background-color: black;
@@ -61,8 +61,7 @@ body{
     margin-bottom: 10px;
  }
 
-.icones{
-    size: 30px;
+ #menulateral svg{
     font-size: 40px;
     margin-right: 12px;
     margin-top: 100px;
@@ -76,26 +75,14 @@ body{
 }
 
 .cadastro{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: white;
     font-family: "Roboto", sans-serif;
     background:black;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 30px;
+    margin: auto;
+    padding: 70px;
     border-radius: 80px;
     border-color: rgb(255, 255, 255);
 
 }
-
-
-.cadastro ::placeholder{
-
-    color: white
-}
-
 
 .cadastro h2{
     text-align: center;
@@ -105,25 +92,40 @@ body{
     
     text-align:center;
     
-
+    padding: 0;
 
 }
+
+
 
 
 .botaoCadastrar{
     border-color: white;
-    border-radius: 80px;
-    text-align: left;
+    border-radius: 100px;
     color:rgb(19, 18, 18);
     background-color: #f1e6e6;
+}
+    
+    .botaoLogar{
+        border-color: white;
+        border-radius: 100px;
+        color:rgb(19, 18, 18);
+        background-color: #f1e6e6;
+    
+    }
+        
+    .cadastro ::placeholder{
 
-}   
+        color: white
+    }
+    
 
 .cadastro input{
     margin-left: 10px;
-    
+    /* width: 100%; */
 }
+.botoesCadastros{
 
-.container{
-    display: flex;
+    display:flex;
+    justify-content: space-between;
 }

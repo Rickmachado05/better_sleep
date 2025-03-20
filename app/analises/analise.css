@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-image: linear-gradient(to right, rgb(0, 0, 0),#3533cd);
+    font-family: "Sigmar", serif;
+    margin: 0;
+    font-size: 15px;
+
+}
+
+#menusuperior {
+  
+    font-family: "Anton", sans-serif;
+    padding: 10px;
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+    color: white;
+}
+
+.semborda{
+        font-family: "Roboto", sans-serif;
+        border: none;
+        background: black;
+        color: white;
+        font-size: 30px;
+    }
+
+.botaolateral {
+    border: none;
+    color: white;
+    background-color: black;
+    border: none;
+    width: 50px;
+    height: 50px;       
+    font-size: 50px;
+}
+
+#menulateral{
+    justify-content: start;
+    background: black;
+    color: white;
+    padding-bottom: 100px;
+
+   
+   
+
+}
+
+ #menulateral ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+ }
+
+ #menulateral li{
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 10px;
+ }
+
+ #menulateral svg{
+    font-size: 40px;
+    margin-right: 12px;
+    margin-top: 100px;
+    padding: auto;
+ }
+
+#menugeral { 
+    display: flex;
+    color: whitesmoke;
+}
+
+
+
+
+.conteudoPrincipal{
+    display: flex;
+    gap: 200px;
+    align-items:center;
+   justify-content: space-between;
+   width: 100%;
+   padding: 20px, 30px;
+   position: relative;
+} 
+.cardGeral{
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    box-shadow: 1px 2px 3px #000000;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    
+}
+.cardGeral svg{
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    color: white;
+    width: 50px;
+    margin-bottom: 10px;
+}
+.cardGeral2{
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    box-shadow: 1px 2px 3px #000000;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+.cardGeral2 svg{
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    color: white;
+    width: 50px;
+    margin-bottom: 10px;
+}
+.cardGeral3{
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    box-shadow: 1px 2px 3px #000000;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+.cardGeral3 svg{
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    width: 50px;
+    margin-bottom: 10px;
+}
+.cardGeral p{
+    color: white;
+    margin: 0;
+}
+
+.texto1{
+    font-size: 30px;
+}
+
+.texto2{
+    font-size: 15px;
+}
+
+
+.paragrafo0{
+    text-align: start;
+    font-size: 29px;
+    margin: 20px;
+}
+
+
+.paragrafo0 p{
+    padding: 5px;
+}
+
+.container{
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
